@@ -1,14 +1,9 @@
 ecrawl
 =====
 
-An escript
+An OTP application
 
 Build
 -----
 
-    $ rebar3 escriptize
-
-Run
----
-
-    $ _build/default/bin/ecrawl
+    $ rebar3 compile
