@@ -7,3 +7,10 @@ sudo ./yggdrasilctl -v -json dhtping box_pub_key="520f712d2f1b56d2e5c1ad5a4a010e
 
 # ping peer to get new list
 sudo ./yggdrasilctl -v -json dhtping box_pub_key="640834eb3323d1bee9cb6bbeac4362ad6dc434f4a81a4cd764484da4de451d4f" coords="[2 2 16]"
+
+# to jq
+sudo ./yggdrasilctl -v -json getdht | jq -r '.dht[] | @sh "\(.box_pub_key) \(.coords) \(.last_seen)"'
+
+# to apl vars
+sudo ./yggdrasilctl -v -json getdht | jq -r '.dht[] | @sh "var ← var,\(.box_pub_key) \(.coords) \(.last_seen)"'
+
