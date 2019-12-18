@@ -20,3 +20,13 @@ stop(_State) ->
 init() ->
     io:format("hello!\n"),
     ok.
+
+% exec:start([]).
+% {ok,[{stdout,[Val]}]} = exec:run("/home/smiley/.golang/src/github.com/yggdrasil-network/yggdrasil-go/yggdrasilctl -v -json getdht",[sync, stdout]).
+% io:format("~p",[Val]).
+
+
+% exec:start([root, {user, "root"}, {limit_users, ["root"]}]).
+% exec:run("whoami", [sync, stdout]).
+% exec:stop(I).
+
